@@ -20,10 +20,10 @@ spec:
 
           resources:
             requests: # Mínimo de requisitos que a maquina precisa para rodar.
-              cpu: 100m
+              cpu: "0.05"
               memory: 20Mi
             limits:
-              cpu: 500m
+              cpu: "0.05"
               memory: 25Mi
 
           startupProbe: # Espera ate (periodSeconds*failureThreshold) 90s para INICIAR o readiness e o liveness. Basicamente verificar quando a aplicação esta pronta para ser liberada.
