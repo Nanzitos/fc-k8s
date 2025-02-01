@@ -18,7 +18,15 @@ spec:
         - name: goserver
           image: "nanzitos/hello-go:v5.5"
 
-          startupProbe: # Espera ate (periodSeconds*failureThreshold) 90s para INICIAR o readines e o liveness. Basicamente verificar quando a aplicação esta pronta para ser liberada.
+          resources:
+            requests: # Mínimo de requisitos que a maquina precisa para rodar.
+              cpu: 100m
+              memory: 20Mi
+            limits:
+              cpu: 500m
+              memory: 25Mi
+
+          startupProbe: # Espera ate (periodSeconds*failureThreshold) 90s para INICIAR o readiness e o liveness. Basicamente verificar quando a aplicação esta pronta para ser liberada.
             httpGet:
               path: /healthz
               port: 8000
