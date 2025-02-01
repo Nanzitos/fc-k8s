@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: "nanzitos/hello-go:v5.5"
+          image: "nanzitos/hello-go:v5.6"
 
           resources:
             requests: # Mínimo de requisitos que a maquina precisa para rodar.
