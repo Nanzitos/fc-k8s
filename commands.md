@@ -9,3 +9,8 @@ kubectl run -it fortio --rm --image=fortio/fortio -- load -qps 800 -t 220s -c 70
 ``` shell
 watch -n1 kubectl get hpa
 ```
+
+## Comando para deletar um statefulsets 
+``` shell
+kubectl delete statefulset 
+```
